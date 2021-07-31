@@ -10,7 +10,7 @@
     @stack('prepend-style')
     @include('includes.style')
     @stack('addon-style')
-    <title>@yield('title')</title>l
+    <title>@yield('title')</title>
 </head>
 <body>
     @include('includes.navbar')
