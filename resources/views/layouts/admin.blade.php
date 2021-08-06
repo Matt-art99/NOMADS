@@ -40,7 +40,7 @@
                     <img alt="Image placeholder" src="{{ url('backend/assets/img/theme/team-4.jpg') }}">
                   </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                    <span class="mb-0 text-sm  font-weight-bold">{{ Auth::user()->name }}</span>
                   </div>
                 </div>
               </a>
@@ -54,7 +54,7 @@
                   <span>Settings</span>
                 </a>
 
-                <a href="#!" class="dropdown-item">
+                <a href="#!" class="dropdown-item" data-toggle="modal" data-target="#modal-notification">
                   <i class="ni ni-user-run"></i>
                   <span>Logout</span>
                 </a>
@@ -154,6 +154,43 @@
         </div>
       </div>
     </div>
+
+    <div class="col-md-4">
+        <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+        <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+            <div class="modal-content bg-gradient-danger">
+              
+                <div class="modal-header">
+                    <h6 class="modal-title" id="modal-title-notification">Did you ready to leave?</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                
+                <div class="modal-body">
+                  
+                    <div class="py-3 text-center">
+                        <i class="ni ni-bell-55 ni-3x"></i>
+                        <h4 class="heading mt-4">You should read this!</h4>
+                        <p>
+                          Select "logout" below if you&apos;re ready to end your current session  
+                        </p>
+                    </div>
+                    
+                </div>
+                
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-link text-white mr-auto" data-dismiss="modal">Close</button>
+                  <form action="{{ url('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-white">Logout</button>
+                  </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  </div>
 
     {{-- Page content  --}}
     <div class="container-fluid mt--6">
