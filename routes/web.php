@@ -17,5 +17,5 @@ Route::prefix('admin')->middleware(['auth','admin'])->group(function () {
 });
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
