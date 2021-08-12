@@ -527,8 +527,9 @@ footer{
 
 // Login
 .login-container{
+    background: linear-gradient(120deg, rgb(231, 205, 255) 50%, #e6ebfa 50%);
     @media(min-width : 992px){
-        background: linear-gradient(90deg, #FFF 63%, #dde2f1 37%);
+        background: linear-gradient(60deg, rgb(231, 205, 255) 50%, #e6ebfa 50%);
         width: 100vw;
         height: 100vh;
     }
@@ -536,23 +537,12 @@ footer{
     .page-login{
         height: 100vh;
 
-        .section-left{
-            h1{
-                font-style: 'Playfair Display', serif;
-                font-weight: bold;
-                font-size: 50px;
-                text-align: left;
-                color: #071C4D;
-            }
-        }
-
-        .section-right{
             .btn-login{
-                background-color: #fc7a18;
+                background-color: #071C4D;
                 color: #FFF;
     
                 &:hover{
-                    background-color: #ff8e38;
+                    background-color: #06297a;
                 }
             }
 
@@ -565,6 +555,5 @@ footer{
                     color: #BFBFBF;
                 }
             }
-        }
     }
 }

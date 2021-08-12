@@ -488,10 +488,13 @@ footer .link a {
   color: #FFF;
 }
 
+.login-container {
+  background: linear-gradient(120deg, #e7cdff 50%, #e6ebfa 50%);
+}
+
 @media (min-width: 992px) {
   .login-container {
-    background: -webkit-gradient(linear, left top, right top, color-stop(63%, #FFF), color-stop(37%, #dde2f1));
-    background: linear-gradient(90deg, #FFF 63%, #dde2f1 37%);
+    background: linear-gradient(60deg, #e7cdff 50%, #e6ebfa 50%);
     width: 100vw;
     height: 100vh;
   }
@@ -501,24 +504,16 @@ footer .link a {
   height: 100vh;
 }
 
-.login-container .page-login .section-left h1 {
-  font-style: 'Playfair Display', serif;
-  font-weight: bold;
-  font-size: 50px;
-  text-align: left;
-  color: #071C4D;
-}
-
-.login-container .page-login .section-right .btn-login {
-  background-color: #fc7a18;
+.login-container .page-login .btn-login {
+  background-color: #071C4D;
   color: #FFF;
 }
 
-.login-container .page-login .section-right .btn-login:hover {
-  background-color: #ff8e38;
+.login-container .page-login .btn-login:hover {
+  background-color: #06297a;
 }
 
-.login-container .page-login .section-right p a {
+.login-container .page-login p a {
   font-family: 'Assistant', sans-serif;
   text-decoration: underline;
   font-weight: 300;
