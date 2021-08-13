@@ -8,8 +8,8 @@
                 <div class="card bg-secondary border-0 mb-0 shadow-sm">
                     <div class="card-header bg-transparent">
                         <div class="btn-wrapper text-center">
-                            <a href="#">
-                                <span class="btn-inner--icon"><img src="frontend/images/logo.png" class="w-50"></span>
+                            <a href="{{ route('home') }}">
+                                <span class="btn-inner--icon"><img src="{{ url('frontend/images/logo.png') }}" class="w-50"></span>
                             </a>
                         </div>
                     </div>
@@ -23,12 +23,12 @@
                                         <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                     </div>
                                     <input id="email" type="text" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" autocomplete="current-password">
-                                    @error('email')
-                                        <span class="invalid-feedback ml-1" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
                                 </div>
+                                @error('email')
+                                    <small class="text-danger ml-1" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </small>
+                                @enderror
                             </div>
 
                             <div class="form-group">
@@ -37,12 +37,12 @@
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
                                     <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password">
-                                    @error('password')
-                                        <span class="invalid-feedback ml-1" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
                                 </div>
+                                @error('password')
+                                    <small class="text-danger ml-1" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </small>
+                                @enderror
                             </div>
 
                             <div class="custom-control custom-control-alternative custom-checkbox">
