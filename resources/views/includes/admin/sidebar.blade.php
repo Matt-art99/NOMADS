@@ -20,7 +20,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="examples/profile.html">
+              <a class="nav-link" href="{{ route('travel-package.index') }}">
                 <i class="ni ni-pin-3 text-primary"></i>
                 <span class="nav-link-text">Travel Package</span>
               </a>
